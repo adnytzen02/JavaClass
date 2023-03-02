@@ -4,23 +4,24 @@ class Animal {
     }
 }
 
-class Pig extends Animal {
-    public.out.println("The Pig sound is: wee wee");
+// 建立 Animal 的子class 
+class Cat extends Animal {
+    public.out.println("The Cat sound is: Meow Meow");
 }
 
 class Dog extends Animal {
     public.out.println("The dog sound is: won won");
 }
 
-
+// 建立 Cat/Dog Object 調用 AnimalSound 的 Method()
 class javaPolymorphism {
     public static void main(String[] args) {
         Animal myAnimal = new Animal();
-        Animal myPig = new Pig();
+        Animal myCat = new Cat();
         Animal myDog = new Dog();
 
         myAnimal.animalSound();
-        myPig.animalSound();
+        myCat.animalSound();
         myDog.animalSound();
 
     }
