@@ -9,6 +9,7 @@ ArrayList 與Java中的數組區別在於
 import java.util.ArrayList; // Import the ArrayList class
 import java.util.Collections;  // Import the Collections class
 
+
 public class Main {
     public static void main(String[] args){
         ArrayList<String> nba = new ArrayList<String>(); // 建立一個 ArrayList 
