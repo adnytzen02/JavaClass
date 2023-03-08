@@ -23,10 +23,24 @@ public class main {
         // 訪問值，使用 get() 方法並引用 Key
         System.out.println(nba.get("Curry"));
 
+        // 列表有多少項目
+        System.out.println("總共有 " + nba.size() + " 項");
+
         // 使用 for- each循環項目
         // 只想訪問Key值: keySet()，只想訪問value值: values()
         for (String i : nba.keySet()) {
             System.out.println("Key: " + i + " value: " + nba.get(i));
         }
+
+        // 刪除項目
+        System.out.println("刪除一個項目: Durant");
+        nba.remove("Durant");
+        System.out.println(nba);
+
+        // 清空列表
+        System.out.println("清空列表");
+        nba.clear();
+        System.out.println(nba);
+
     }
 }
