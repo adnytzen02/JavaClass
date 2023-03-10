@@ -24,5 +24,37 @@ Primitive Data Type    <===>   Wrapper Class
 
 
 public class Main {
-    
+    public static void main(String[] args) {
+        Type wrapper = new Type();
+        wrapper.demo_1();
+        wrapper.demo_2();
+        wrapper.demo_3();
+    }
+}
+
+
+class Type {
+    static void demo_1() {
+        Integer myInt = 35;
+        Double myDouble = 19.99;
+        Character myChar = 'Z';
+        System.out.println(myInt);
+        System.out.println(myDouble);
+        System.out.println(myChar);
+    }
+
+    static void demo_2() {
+        Integer myInt = 35;
+        Double myDouble = 19.99;
+        Character myChar = 'Z';
+        System.out.println(myInt.intValue());
+        System.out.println(myDouble.doubleValue());
+        System.out.println(myChar.charValue());   
+    }
+
+    static void demo_3() {
+        Integer myInt = 100;
+        String myString = myInt.toString();
+        System.out.println(myString.length());
+    }
 }
