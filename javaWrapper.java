@@ -38,6 +38,7 @@ class Type {
         Integer myInt = 35;
         Double myDouble = 19.99;
         Character myChar = 'Z';
+        System.out.println("直接打印結果:");
         System.out.println(myInt);
         System.out.println(myDouble);
         System.out.println(myChar);
@@ -47,14 +48,18 @@ class Type {
         Integer myInt = 35;
         Double myDouble = 19.99;
         Character myChar = 'Z';
-        System.out.println(myInt.intValue());
-        System.out.println(myDouble.doubleValue());
-        System.out.println(myChar.charValue());   
+        System.out.println("\n獲取與相應包裝對象關聯的值:");
+        System.out.println("intValue(): " + myInt.intValue());
+        System.out.println("doubleValue(): " + myDouble.doubleValue());
+        System.out.println("charValue() " + myChar.charValue());   
     }
 
     static void demo_3() {
+        // 是toString()方法，它用於將包裝器對象轉換為字符串。
+        // 轉換 Integer 為 String，用length()方法將String輸出"string"的長度。
         Integer myInt = 100;
         String myString = myInt.toString();
-        System.out.println(myString.length());
+        System.out.println("\n轉換 Integer 為 String，得到轉換後的長度:");
+        System.out.println("String.length(): " + myString.length());
     }
 }
