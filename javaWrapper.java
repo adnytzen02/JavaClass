@@ -23,7 +23,7 @@ Primitive Data Type    <===>   Wrapper Class
 */
 
 
-public class Main {
+public class javaWrapper {
     public static void main(String[] args) {
         Type wrapper = new Type();
         wrapper.demo_1();

@@ -6,7 +6,7 @@ java執行程式時，可能會出現不同的錯誤。
 */
 
 // 在Java中捕捉 Exceptions，可以用 try/catch 來完成。
-public class Main {
+public class javaExceptions {
     public static void main(String[] args) {
         Type theCatch = new Type();
         theCatch.demo_1();
