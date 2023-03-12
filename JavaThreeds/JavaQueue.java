@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        ConcurrentLinkedQueue<Integer> queue = new ConcurrentLinkedQueue<>();
+        JavaQueue<Integer> queue = new JavaQueue<>();
 
         Producer producer = new Producer(queue);
         Consumer consumer = new Consumer(queue);
@@ -14,10 +14,10 @@ public class Main {
 }
 
 class Producer extends Thread {
-    private ConcurrentLinkedQueue<Integer> queue;
+    private JavaQueue<Integer> queue;
     private Random rand = new Random();
 
-    public Producer(ConcurrentLinkedQueue<Integer> queue) {
+    public Producer(JAvaQueue<Integer> queue) {
         this.queue = queue;
     }
 
@@ -36,10 +36,10 @@ class Producer extends Thread {
 }
 
 class Consumer extends Thread {
-    private ConcurrentLinkedQueue<Integer> queue;
+    private JavaQueue<Integer> queue;
     private Random rand = new Random();
 
-    public Consumer(ConcurrentLinkedQueue<Integer> queue) {
+    public Consumer(JavaQueue<Integer> queue) {
         this.queue = queue;
     }
 
