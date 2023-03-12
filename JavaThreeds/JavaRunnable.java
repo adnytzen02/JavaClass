@@ -17,7 +17,6 @@ public class Main {
 }
 
 
-
 class Practice_1 implements Runnable {
     static void demo_1() {
         System.out.println("This code is outside of the thread");
