@@ -7,7 +7,7 @@
 import java.io.FileWriter;   // Import the FileWriter class
 import java.io.IOException;  // Import the IOException class to handle errors
 
-public class WriteToFile {
+public class JavaWriteToFile {
   public static void main(String[] args) {
     try {
         // 建立FileWriter物件，並指定檔案名稱。
