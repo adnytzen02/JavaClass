@@ -17,4 +17,12 @@ File myObj = new File("filename.txt"); // Specify the filename
 |Method|Type|Description|
 |:---:|:---:|:---:|
 |canRead()|Boolean|測試文件是否可讀|
-
+|canWrite()|Boolean|測試文件是否可寫|
+|createNewFile()|Boolean|創建一個空文件|
+|delete()|Boolean|刪除文件|
+|exists()|Boolean|測試文件是否存在|
+|getName()|String|返回文件的名稱|
+|getAbsolutePath()|String|返回文件的絕對路徑名|
+|length()|Long|回傳檔案的大小（以位元組為單位）。|
+|list()|String[]|回傳目錄中檔案的陣列。|
+|mkdir()|Boolean|建立一個目錄|
