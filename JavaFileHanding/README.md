@@ -10,11 +10,11 @@ File 包中的 class 允許 java.io 使用文件。
 
 ```js
 import java.io.File;  // import the File class
-File myObj = new File("filename.txt"); 
+File myObj = new File("filename.txt"); // Specify the filename
 ```
 
 ### File有許多用於創建和文件信息的有用方法
 |Method|Type|Description|
-|:---:||:---:||:---:|
+|:---:|:---:|:---:|
 |canRead()|Boolean|測試文件是否可讀|
 
