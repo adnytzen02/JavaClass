@@ -26,3 +26,9 @@ File myObj = new File("filename.txt"); // Specify the filename
 |length()|Long|回傳檔案的大小（以位元組為單位）。|
 |list()|String[]|回傳目錄中檔案的陣列。|
 |mkdir()|Boolean|建立一個目錄|
+
+
+### 要在特定目錄中創建文件（需要權限）
+1.  指定文件的路徑並使用雙反斜杠轉義“ \”字符（適用於 Windows）。
+    ```js File myObj = new File("C:\\Users\\MyName\\filename.txt"); ```
+2.  在 Mac 和 Linux 上，您可以只寫路徑，例如：/Users/name/filename.txt
