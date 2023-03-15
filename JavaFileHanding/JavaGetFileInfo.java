@@ -1,6 +1,6 @@
 import java.io.File;
 
-public class GetFileInfo {
+public class JavaGetFileInfo {
     public static void main(String[] args) {
         File myObj = new File("filename.txt");
         if (mtObj.exists()) {
