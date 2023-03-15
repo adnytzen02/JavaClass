@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class Login {
+public class JavaLogin {
     public static void main(String[] args) {
         String username = "myusername";
         String password = "mypassword";
