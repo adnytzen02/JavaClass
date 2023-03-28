@@ -2,6 +2,7 @@ public class JavaDataType {
     public static void main(String[] args) {
         integer();
         floating();
+        str();
     }
 
     public static void integer() {
@@ -37,5 +38,9 @@ public class JavaDataType {
         // cahr 跟 String 資料類型不一樣
         char myVar3 = 'R';
         String myVar4 = "R";
+        
+        // boolean ，只能取值 true or false。
+        boolean myBoolean = true;
+        System.out.println(myBoolean);
     }
 }
