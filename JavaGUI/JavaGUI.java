@@ -5,6 +5,7 @@ Swing 是一個用於 Java 的 GUI ( Graphical User Interface )小部件工具�
 
 
 import javax.swing.*;
+import java.awt.*;
 
 public class JavaGUI  extends JPanel {
 
