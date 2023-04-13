@@ -9,7 +9,7 @@ ArrayList 數組將項目存儲為有序集合，必須使用索引號（int類�
 import java.util.HashMap; // import the HashMap class
 
 
-public class javaHashMap {
+public class JavaHashMap {
     public static void javaHashMap(String[] args) {
 
         // 建立一個 HashMap 數組

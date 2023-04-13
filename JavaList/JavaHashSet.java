@@ -4,7 +4,7 @@ HashSet 是項目的集合，其中每個項目都是唯一的。
 
 import java.util.HashSet; // Import the HashSet class
 
-public class javaHashSet {
+public class JavaHashSet {
     public static void main(String[] args) {
         // 建立一個 HashSet <String> 數組
         HashSet<String> cars = new HashSet<String>();

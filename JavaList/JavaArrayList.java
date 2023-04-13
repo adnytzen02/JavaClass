@@ -10,7 +10,7 @@ import java.util.ArrayList; // Import the ArrayList class
 import java.util.Collections;  // Import the Collections class
 
 
-public class javaArrayList {
+public class JavaArrayList {
     public static void main(String[] args){
         ArrayList<String> nba = new ArrayList<String>(); // 建立一個 ArrayList 
         nba.add("lakers");

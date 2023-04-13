@@ -20,7 +20,7 @@ LinkedList 的工作原理:
 import java.util.LinkedList; // Import the LinkedList class
 
 
-public class javaLinkedList {
+public class JavaLinkedList {
     public static void main(String[] args){
         LinkedList<String> nba = new LinkedList<String>(); // 建立一個 ArrayList 
         nba.add("lakers");
