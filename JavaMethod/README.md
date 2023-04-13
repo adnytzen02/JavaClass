@@ -32,12 +32,46 @@ public class Calculator {
 }
 ```
 
-### Scope
+### Scope ( 作用域 )
 Java 中的作用域（Scope）是指在程式碼中定義變數的區域，該區域中定義的變數只能在該區域內部被訪問。Java 中有四種作用域：   
 1. 類作用域（Class Scope）：指在類中定義的變數，它們可以在整個類中被訪問。
+```js
+public class MyClass {
+    static int count;  // 類作用域變數，可以在整個類中訪問
+    public void myMethod() {
+        count++;  // 在方法中訪問類作用域變數
+    }
+}
+```
 2. 成員作用域（Member Scope）：指在類的成員方法中定義的變數，它們只能在該方法中被訪問。
+```js
+public class MyClass {
+    public void myMethod() {
+        int x;  // 成員作用域變數，只能在 myMethod 方法中訪問
+        // 其他程式碼...
+    }
+}
+```
 3. 塊作用域（Block Scope）：指在花括號（{}）中定義的變數，它們只能在該花括號中被訪問。
+```js
+public class MyClass {
+    public void myMethod() {
+        if (true) {
+            int x = 1;  // 塊作用域變數，只能在 if 語句中訪問
+        }
+        // 在這裡無法訪問變數 x，因為已經超出了 x 的作用域
+    }
+}
+```
 4. 局部作用域（Local Scope）：指在方法中定義的變數，它們只能在該方法中被訪問。
+```js
+public class MyClass {
+    public void myMethod() {
+        int x = 1;  // 局部作用域變數，只能在 myMethod 方法中訪問
+        // 其他程式碼...
+    }
+}
+```
 
 * 在 Java 中，變數的作用域由大到小依次是：類作用域 > 成員作用域 > 块作用域 > 局部作用域。
     * 在一個較小的作用域中可以定義同名的變數，它們互相獨立且不會相互影響。如果在較小的作用域中定義了與較大的作用域中定義的變數同名的變數，則較小作用域中的變數將覆蓋較大作用域中的變數，直到離開該作用域為止。
