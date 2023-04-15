@@ -13,7 +13,3 @@ OOP 在軟件開發中被廣泛應用，包括面向對象分析、設計和編�
 2. Inheritance ( 繼承 )
 3. Polymorphism ( 多態性 )
 
-
-
-
-
