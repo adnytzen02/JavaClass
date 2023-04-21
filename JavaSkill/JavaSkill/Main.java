@@ -36,18 +36,25 @@ public void keyTyped(KeyEvent e) {
 @Override
 public void keyPressed(KeyEvent e) {
     int k = e.getKeyCode(); // 取得按下的按鍵代碼
-    if (k == KeyEvent.VK_UP) { // 如果是上鍵
-        s.walk(0,-5); // 讓羊向上移動 5 個像素
-    }
-
-    if (k == KeyEvent.VK_DOWN) { // 如果是下鍵
-        s.walk(0,5); // 讓羊向下移動 5 個像素
-    }
-    if (k == KeyEvent.VK_RIGHT) { // 如果是右鍵
-        s.walk(5,0); // 讓羊向右移動 5 個像素
-    }
-    if (k == KeyEvent.VK_LEFT) { // 如果是左鍵
-        s.walk(-5,0); // 讓羊向左移動 5 個像素
+    switch (k) {
+        case KeyEvent.VK_UP: // 當按下鍵盤的「上」鍵
+        case KeyEvent.VK_W:
+            s.walk(0,-5); // Sheep物件會向上移動
+            break;
+        case KeyEvent.VK_DOWN: // 當按下鍵盤的「下」鍵
+        case KeyEvent.VK_S:
+            s.walk(0,5); // Sheep物件會向下移動
+            break;
+        case KeyEvent.VK_RIGHT: // 當按下鍵盤的「右」鍵
+        case KeyEvent.VK_D:
+            s.walk(5,0); // Sheep物件會向右移動
+            break;
+        case KeyEvent.VK_LEFT: // 當按下鍵盤的「左」鍵
+        case KeyEvent.VK_A:
+            s.walk(-5,0); // Sheep物件會向左移動
+            break;
+        default:
+            JOptionPane.showMessageDialog(this, "Please use an arrow key."); // 當按下其他按鍵時會跳出提示視窗
     }
     repaint(); // 重繪畫面
 }
