@@ -23,4 +23,4 @@ expression 可以是 byte、short、int、char 或 String 等基本資料類型�
 
 
 * 範例
-    製作一隻羊，可以用W/A/S/D 跟 方向鍵移動。
+    製作一隻羊，可以用W/A/S/D 跟 方向鍵讓羊進行移動。
