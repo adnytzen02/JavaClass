@@ -24,3 +24,6 @@ Servlet可以通過初始化參數和上下文參數來設置配置資訊。初�
     當Web容器需要終止Servlet時，它會調用Servlet的銷毀方法（destroy()）。在銷毀方法中，Servlet可以執行任何必要的清理工作，例如釋放資源、關閉數據庫連接等等。
 
 ### 3. GetRequest
+
+
+
