@@ -1,6 +1,8 @@
 ## Servlet
-Servlet是Java Web應用程式的基礎組件之一，用於處理HTTP請求和生成HTTP響應。Servlet運行在Web容器中，當Web容器接收到HTTP請求時，就會根據Servlet的URL映射路徑來選擇適當的Servlet進行處理。   
+Servlet是Java Web應用程式的基礎組件之一，用於處理HTTP請求和生成HTTP響應。Servlet運行在Web容器中，當Web容器接收到HTTP請求時，就會根據Servlet的URL映射路徑來選擇適當的Servlet進行處理。    
+Servlet是一個Java類別，必須繼承javax.servlet.http.HttpServlet類別。Servlet類別可以重寫doGet、doPost、doPut等方法來處理HTTP請求。Servlet可以通過HttpServletRequest對象獲取請求信息，例如請求URL、請求參數、HTTP標頭等等。Servlet可以通過HttpServletResponse對象生成HTTP響應，例如設置HTTP標頭、寫入響應內容等等。   
 
+Servlet可以通過初始化參數和上下文參數來設置配置資訊。初始化參數定義在web.xml檔案或@WebServlet註解中，是Servlet的特定參數。上下文參數是Web應用程式的全域參數，可以在web.xml檔案中定義。   
 
 ### 1. MakeFirstServlet
 1. 創建一個 Java 程序，並將其保存在網站的 /WEB-INF/classes 目錄下。
