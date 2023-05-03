@@ -22,3 +22,5 @@ Servlet可以通過初始化參數和上下文參數來設置配置資訊。初�
     當Web容器收到HTTP請求時，它會根據URL映射找到相應的Servlet並調用其服務方法（service()）來處理請求。在服務階段中，Servlet可以從HTTP請求中獲取相關信息，例如請求方法、請求參數等等，並可以向HTTP響應中添加內容。
 3. 終止階段（Termination）：
     當Web容器需要終止Servlet時，它會調用Servlet的銷毀方法（destroy()）。在銷毀方法中，Servlet可以執行任何必要的清理工作，例如釋放資源、關閉數據庫連接等等。
+
+### 3. GetRequest
