@@ -41,3 +41,7 @@ Get Request是一種HTTP請求方法，用於從伺服器檢索數據。它是HT
 * PostFormServlet.java
 使用 PostRequest 方法，通過 PostFormServlet.java 新增書本編號、名稱、價錢、作者等資料，然後上傳至 mysql。   
 相較於 GET 請求方法，POST 請求方法更加安全可靠。在 GET 方法中，所有的請求參數都是顯示在 URL 上的，因此可能會被其他人輕鬆地窺探到請求參數，進而造成數據泄露的風險。而在 POST 方法中，所有的請求參數都是隱藏在 HTTP 請求主體中的，因此更加安全可靠。
+
+５. Cookies
+Cookies（中文稱作「網路甜點」）是一種存儲在用戶端瀏覽器中的小型數據文件，用於在伺服器和客戶端之間傳遞資料。通常用於實現網站的身份驗證、記住用戶喜好、購物車等功能。當伺服器向客戶端發送響應時，可以在HTTP標頭中添加Set-Cookie欄位，告訴瀏覽器存儲Cookie。瀏覽器在後續的請求中會自動將Cookie帶上，放在HTTP請求頭中的Cookie欄位中，傳送到伺服器端。在Servlet中，可以使用HttpServletRequest和HttpServletResponse對象的方法來設置、讀取和刪除Cookie。   
+
