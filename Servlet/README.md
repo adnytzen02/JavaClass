@@ -45,7 +45,7 @@ Get Request是一種HTTP請求方法，用於從伺服器檢索數據。它是HT
 ### ５. Cookies
 Cookies（中文稱作「網路甜點」）是一種存儲在用戶端瀏覽器中的小型數據文件，用於在伺服器和客戶端之間傳遞資料。通常用於實現網站的身份驗證、記住用戶喜好、購物車等功能。當伺服器向客戶端發送響應時，可以在HTTP標頭中添加Set-Cookie欄位，告訴瀏覽器存儲Cookie。瀏覽器在後續的請求中會自動將Cookie帶上，放在HTTP請求頭中的Cookie欄位中，傳送到伺服器端。在Servlet中，可以使用HttpServletRequest和HttpServletResponse對象的方法來設置、讀取和刪除Cookie。   
 
-*  Cookies/myCode/CookieServlet.java
+*  Cookies/myCode/CookieServlet.java    
     這是一個使用 Java Servlet 和 MySQL 資料庫的簡單範例。當使用者 GET 該 Servlet 時，會收到一組 HTML 表單，使用者填寫表單後，點選「Confirm」按鈕時，資料會被存到 Cookie 裡，之後使用者 POST 該 Servlet 時，Servlet 會讀取 Cookie 裡的資料，然後把資料存到 MySQL 資料庫中。
 
     在 Servlet 初始化時，我們載入了 MySQL JDBC Driver，建立了資料庫連線，並設定 Prepared Statement 指令。在 POST 時，我們使用了 Prepared Statement 參數，然後執行了 SQL INSERT 指令。
