@@ -46,14 +46,19 @@ Get Request是一種HTTP請求方法，用於從伺服器檢索數據。它是HT
 Cookies（中文稱作「網路甜點」）是一種存儲在用戶端瀏覽器中的小型數據文件，用於在伺服器和客戶端之間傳遞資料。通常用於實現網站的身份驗證、記住用戶喜好、購物車等功能。當伺服器向客戶端發送響應時，可以在HTTP標頭中添加Set-Cookie欄位，告訴瀏覽器存儲Cookie。瀏覽器在後續的請求中會自動將Cookie帶上，放在HTTP請求頭中的Cookie欄位中，傳送到伺服器端。在Servlet中，可以使用HttpServletRequest和HttpServletResponse對象的方法來設置、讀取和刪除Cookie。   
 
 *  Cookies/myCode/CookieServlet.java    
-    這是一個使用 Java Servlet 和 MySQL 資料庫的簡單範例。當使用者 GET 該 Servlet 時，會收到一組 HTML 表單，使用者填寫表單後，點選「Confirm」按鈕時，資料會被存到 Cookie 裡，之後使用者 POST 該 Servlet 時，Servlet 會讀取 Cookie 裡的資料，然後把資料存到 MySQL 資料庫中。
+    這是一個使用 Java Servlet 和 MySQL 資料庫的簡單範例。當使用者 GET 該 Servlet 時，會收到一組 HTML 表單，使用者填寫表單後，點選「Confirm」按鈕時，資料會被存到 Cookie 裡，之後使用者 POST 該 Servlet 時，Servlet 會讀取 Cookie 裡的資料，然後把資料存到 MySQL 資料庫中。   
 
-    在 Servlet 初始化時，我們載入了 MySQL JDBC Driver，建立了資料庫連線，並設定 Prepared Statement 指令。在 POST 時，我們使用了 Prepared Statement 參數，然後執行了 SQL INSERT 指令。
+    在 Servlet 初始化時，載入了 MySQL JDBC Driver，建立了資料庫連線，並設定 Prepared Statement 指令。在 POST 時，使用了 Prepared Statement 參數，然後執行了 SQL INSERT 指令。   
 
-    在 doGet 方法中，我們使用 request.getParameter 方法獲取表單資料，然後存到 Cookie 裡，並回應一個 HTML 表單給使用者。在 doPost 方法中，我們使用 request.getCookies 方法讀取 Cookie 裡的資料，然後存到 MySQL 資料庫中。
+    在 doGet 方法中，使用 request.getParameter 方法獲取表單資料，然後存到 Cookie 裡，並回應一個 HTML 表單給使用者。在 doPost 方法中，使用 request.getCookies 方法讀取 Cookie 裡的資料，然後存到 MySQL 資料庫中。   
 
 ### 6. Session
 Session（會話）是指在客戶端（如網頁瀏覽器）與伺服器之間建立的一種持久化的網路協議，用於在一系列HTTP請求與回應之間維護狀態。在一次會話中，客戶端與伺服器之間可以互相傳遞資訊，並且保持這些資訊的狀態，使得連續的請求能夠擁有同樣的狀態。在網路應用開發中，Session可以用於記錄用戶的登入狀態、購物車內容、個人化設定等信息。Session通常由伺服器端管理，可以使用各種不同的技術和存儲方式實現。
 
-* 
+* Session/myCode/Session.java   
+    在這個 Servlet 中，建立了一個 Book 物件，並透過 HttpSession 儲存了它，接著在 doPost 方法中，從 HttpSession 中取出 Book 物件，再透過 JDBC 將它儲存至資料庫中。   
+
+    在 initializeJDBC 方法中，載入 MySQL 驅動程式，並建立了一個 Connection 物件，連接至本機上的 MySQL 資料庫。接著，使用 PreparedStatement 物件，並透過 SQL 語句將書籍資料插入到資料庫中。   
+
+    最後，在 storeBook 方法中，將 Book 物件中的屬性透過 PreparedStatement 的方法設置到 SQL 語句中，最後使用 executeUpdate 方法將資料插入至資料庫。   
 
