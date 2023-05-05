@@ -28,7 +28,7 @@ public class BookServlet extends HttpServlet {
                 book.setAuthor(rs.getString("author"));
             }
 
-
+            // 將 book 物件設定到 request 中，以便在 jsp 中使用
             request.setAttribute("book",book);
             request.getRequestDispatcher("/book.jsp").forward(request,response);
         } catch (SQLException e) {
@@ -41,6 +41,7 @@ public class BookServlet extends HttpServlet {
 
     }
 
+    // 初始化 JDBC 相關設定
     private void initializeJDBC() {
         try {
             Class.forName("com.mysql.jdbc.Driver");

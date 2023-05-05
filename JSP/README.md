@@ -4,9 +4,10 @@ JSP（JavaServer Pages）是一種基於Java技術的網頁開發技術。JSP透
 
 ### addUpto.jsp
 
-這是一個使用JSP技術的網頁，顯示了從1加到100的數字和，每行顯示一個結果。在這個JSP頁面中，使用了Java代碼塊和聲明區域。addUpTo()方法使用聲明區域定義，用於計算從1到傳入的整數n的總和。在for循環中，遍歷從1到100的整數，將每個整數傳遞給addUpTo()方法，並顯示結果。HTML標記用於構建頁面的基本結構。
-
-* addUpTo.jsp
+* addUpTo.jsp   
     這是一個使用JSP技術的網頁，顯示了從1加到100的數字和，每行顯示一個結果。在這個JSP頁面中，使用了Java代碼塊和聲明區域。addUpTo()方法使用聲明區域定義，用於計算從1到傳入的整數n的總和。在for循環中，遍歷從1到100的整數，將每個整數傳遞給addUpTo()方法，並顯示結果。HTML標記用於構建頁面的基本結構。
 
-### 
+### JSP_SQL
+
+* JSP_SQL/book/BookServlet.java   
+    這是一個用於查詢書籍信息的Servlet。該Servlet通過JDBC訪問數據庫中的book表，並根據用戶傳入的bookId進行查詢，並將查詢結果存儲在一個Book對象中，然後將Book對象作為請求屬性傳遞給book.jsp頁面進行展示。在初始化時，它設置了一個準備好的語句(preparedStatement)，該語句用於查詢book表中的書籍信息。該Servlet使用JDBC來訪問MySQL數據庫。
