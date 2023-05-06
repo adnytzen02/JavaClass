@@ -45,3 +45,9 @@ JSP Directive包含三種類型：
 
     3. taglib directive：用於設置JSP應用程序使用的標籤庫。   
 
+
+### JavaBeans
+JSP JavaBeans 是指一種Java類別，用於封裝數據並提供訪問方法，通常用於Web應用程序中的模型層。   
+在JSP頁面中，可以使用JSP標記庫或JSP自定義標記來訪問和顯示JavaBean中的數據。使用JavaBeans可以實現Web應用程序中的MVC（模型-視圖-控制器）模式，並使代碼更加可維護和可重用。   
+要創建JavaBeans，必須遵循命名和設計模式，   
+例如命名屬性必須以小寫字母開頭，使用getter和setter方法來訪問屬性，並實現Serializable接口以實現對象的序列化。通過在JSP頁面中使用JavaBeans，我們可以使代碼更加清晰、可維護和易於擴展。   
