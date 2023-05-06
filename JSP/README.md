@@ -11,3 +11,25 @@ JSP（JavaServer Pages）是一種基於Java技術的網頁開發技術。JSP透
 
 * JSP_SQL/book/BookServlet.java   
     這是一個用於查詢書籍信息的Servlet。該Servlet通過JDBC訪問數據庫中的book表，並根據用戶傳入的bookId進行查詢，並將查詢結果存儲在一個Book對象中，然後將Book對象作為請求屬性傳遞給book.jsp頁面進行展示。在初始化時，它設置了一個準備好的語句(preparedStatement)，該語句用於查詢book表中的書籍信息。該Servlet使用JDBC來訪問MySQL數據庫。
+
+
+### Predefined Variable
+JSP中的預定義變量是指在JSP網頁中預先定義好的變量，可直接在JSP頁面上使用，而不需要額外聲明或定義。這些變量由JSP容器提供，主要用於幫助開發者快速編寫JSP頁面。   
+
+* 以下是一些常見的預定義變量：
+
+1. request：代表HTTP請求的對象，可用於存取客戶端提交的參數。   
+
+2. response：代表HTTP回應的對象，可用於向客戶端發送回應。   
+
+3. session：代表HTTP會話的對象，可用於存取和管理用戶會話的相關資訊。   
+
+4. application：代表Web應用程式的全域範圍，可用於存取和管理Web應用程式的相關資訊。   
+
+5. out：代表JSP回應的輸出串流，可用於向客戶端發送回應。   
+
+6. pageContext：代表當前JSP頁面的上下文，可用於存取和管理當前頁面的相關資訊。   
+
+7. config：代表當前JSP頁面的配置，可用於存取和管理當前頁面的配置資訊。   
+
+這些預定義變量可在JSP網頁中直接使用，不需要額外聲明或初始化。例如，可以使用request.getParameter("name")來獲取HTTP請求中名為"name"的參數，或使用out.println("Hello, World!")向客戶端發送回應。   
