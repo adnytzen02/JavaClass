@@ -36,7 +36,9 @@ JSP中的預定義變量是指在JSP網頁中預先定義好的變量，可直�
 
 
 ### Directive
-JSP Directive是用於指示JSP容器的指令，可以用來控制JSP頁面的編譯和執行。它們以"<%"開頭，以"%>"結尾，可以放置在JSP頁面的任何地方，但是只有在JSP頁面的開頭才有效。JSP Directive包含三種類型：   
+JSP Directive是用於指示JSP容器的指令，可以用來控制JSP頁面的編譯和執行。   
+它們以"<%"開頭，以"%>"結尾，可以放置在JSP頁面的任何地方，但是只有在JSP頁面的開頭才有效。   
+JSP Directive包含三種類型：   
     1. page directive：用於設置JSP頁面的屬性，如頁面的語言，編碼方式，session屬性等。   
 
     2. include directive：用於將其他JSP頁面或HTML頁面包含在當前頁面中。   
