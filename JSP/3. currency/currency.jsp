@@ -4,7 +4,7 @@
     <title>Title</title>
 </head>
 <body>
-<%
+<%  // 定義三種貨幣匯率，以及輸入的金額
     double jpn = 4.4382;
     double usd = 0.0345;
     double cny = 0.2300;
