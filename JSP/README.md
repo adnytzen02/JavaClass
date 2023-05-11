@@ -86,3 +86,22 @@ JSP的JavaBean還可以在頁面（page）範圍內使用。
 這意味著，在同一頁面內的JSP元素中可以共享JavaBean。   
 這樣，您可以在同一頁面的多個區域內使用相同的JavaBean對象。   
 如果在頁面範圍中設置JavaBean，則只能在當前JSP頁面中訪問它。   
+
+```js
+<%@ page import="com.example.JavaBean" %>
+<html>
+  <head>
+    <title>Page-scoped JavaBean Example</title>
+  </head>
+  <body>
+    <jsp:useBean id="myBean" class="com.example.JavaBean" scope="page"/>
+    
+    <h2>Welcome to my page</h2>
+    <p>My JavaBean's name is <jsp:getProperty name="myBean" property="name"/></p>
+    
+    <%-- Other JSP elements that use the same JavaBean instance --%>
+    
+  </body>
+</html>
+
+```
