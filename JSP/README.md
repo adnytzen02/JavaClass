@@ -49,5 +49,40 @@ JSP Directive包含三種類型：
 ### JavaBeans
 JSP JavaBeans 是指一種Java類別，用於封裝數據並提供訪問方法，通常用於Web應用程序中的模型層。   
 在JSP頁面中，可以使用JSP標記庫或JSP自定義標記來訪問和顯示JavaBean中的數據。使用JavaBeans可以實現Web應用程序中的MVC（模型-視圖-控制器）模式，並使代碼更加可維護和可重用。   
-要創建JavaBeans，必須遵循命名和設計模式，   
-例如命名屬性必須以小寫字母開頭，使用getter和setter方法來訪問屬性，並實現Serializable接口以實現對象的序列化。通過在JSP頁面中使用JavaBeans，我們可以使代碼更加清晰、可維護和易於擴展。   
+在JSP中，JavaBean是指一個包含私有變數、公有Setter和Getter方法的類別。這些類別可以在JSP中使用，讓你可以儲存資料並在頁面中顯示或操作。   
+為了讓JSP能夠使用JavaBean，你需要先在JSP中使用useBean指令，並在其中設置JavaBean的屬性。一旦JavaBean被初始化，你就可以在JSP中使用它。   
+
+#### application
+Application Scope是JSP中的一個儲存資料的方式，它是指將資料儲存到整個應用程式中。   
+使用Application Scope，你可以將JavaBean物件儲存在整個應用程式中，這樣所有的JSP頁面都可以訪問該物件。   
+```js
+<jsp:useBean id="myBean" class="myPackage.MyBean" scope="application"/>
+```
+
+#### session
+
+session是一個用於存儲和檢索與特定客戶端（瀏覽器）關聯的數據的機制。通過將對象存儲在session中，可以在整個Web應用程序中跨多個頁面共享數據。   
+假設有一個JavaBean名為"User"，具有屬性username和password，並且想要在JSP頁面之間共享該物件，可以在JSP頁面中使用以下程式碼：   
+```js
+<%-- 宣告使用JavaBean --%>
+<jsp:useBean id="user" class="myPackage.User" scope="session"/>
+
+<%-- 設定JavaBean的屬性 --%>
+<jsp:setProperty name="user" property="username" value="myUsername"/>
+<jsp:setProperty name="user" property="password" value="myPassword"/>
+```
+其他JSP頁面中，可以再次使用上面的程式碼來存取和使用session中的JavaBean，例如：   
+```js
+<%-- 宣告使用JavaBean --%>
+<jsp:useBean id="user" class="myPackage.User" scope="session"/>
+
+<%-- 取得JavaBean的屬性 --%>
+<%= user.getUsername() %>
+<%= user.getPassword() %>
+```
+透過session中的JavaBean，JSP頁面之間可以共享資料，並且可以在不同的請求之間保留資料，這在某些應用中非常有用。   
+#### page
+JSP的JavaBean還可以在頁面（page）範圍內使用。   
+這意味著，在同一頁面內的JSP元素中可以共享JavaBean。   
+這樣，您可以在同一頁面的多個區域內使用相同的JavaBean對象。   
+如果在頁面範圍中設置JavaBean，則只能在當前JSP頁面中訪問它。   
