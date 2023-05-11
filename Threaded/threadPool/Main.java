@@ -33,6 +33,7 @@ class PrintChar implements Runnable {
 
 public class Main {
     public static void main(String[] args) {
+        // ExecutorService executorService = Executors.newCachedThreadPool();  // 建立無限制大小的執行緒池
         ExecutorService executorService = Executors.newFixedThreadPool(4); // 建立固定大小的執行緒池
         executorService.execute((new PrintChar('a',20))); // 執行印出字元任務
         executorService.execute((new PrintChar('b',20))); // 執行印出字元任務
