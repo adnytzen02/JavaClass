@@ -35,6 +35,21 @@ public class Lock {
         }
     }
 
+/*
+    // synchronized 另一種寫法
+    // 定義一個 AddMoneyTask 類別，實作 Runnable 介面
+    private static class AddMoneyTask implements Runnable {
+
+        @Override
+        public void run() {
+            synchronized (account) {
+                // 在該任務中調用 Account 的存款方法
+                account.deposit();
+            }
+        }
+    }
+*/
+
     public static void main(String[] args) {
         // 創建一個線程池，使用 Executors 的 newCachedThreadPool 方法創建一個緩存線程池
         ExecutorService executorService = Executors.newCachedThreadPool();
