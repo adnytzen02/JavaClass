@@ -39,3 +39,7 @@ Race condition通常是由於未正確同步並發執行的程序或沒有適當
 透過線程池中的執行緒來執行這些任務。   
 使用了 Java 的 Lock 和 Condition 機制來實現同步和互斥控制。   
 Account 類別包含了存款和取款的方法。在執行這些方法時，它們使用 ReentrantLock 來取得互斥鎖，以防止多個線程同時對帳戶進行操作。   
+
+
+### PCP
+PCP (Producer & Comsumer Problem)
