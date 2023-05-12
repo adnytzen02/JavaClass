@@ -3,7 +3,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class synchronized {
+public class Synchronized {
     private static Account account = new Account();
 
     // 定義一個 Account 類別，用於保存餘額和存款的操作
