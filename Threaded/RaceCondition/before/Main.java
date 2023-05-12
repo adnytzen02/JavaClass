@@ -12,16 +12,9 @@ public class Main {
             return this.balance;
         }
 
-        // 存款操作，每次將餘額增加 1，並讓執行緒睡眠 3 毫秒，模擬一些計算運算
+        // 存款操作，每次將餘額增加 1
         public void deposit() {
             int newBalance = this.balance + 1;
-
-            try {
-                Thread.sleep(3);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
             this.balance = newBalance;
         }
     }
