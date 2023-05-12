@@ -39,7 +39,7 @@ public class Lock {
         ExecutorService executorService = Executors.newCachedThreadPool();
 
         // 創建 5000 個 AddMoneyTask 任務，提交給線程池執行
-        for (int i = 0; i < 5000; i++) {
+        for (int i = 0; i < 2000; i++) {
             executorService.execute(new AddMoneyTask());
         }
 
