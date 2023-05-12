@@ -61,7 +61,7 @@ public class Main {
         @Override
         public void run() {
             while (true) {
-                account.withdraw((int)(Math.random() * 20) +5); // 提款隨機金額
+                account.withdraw((int)(Math.random() * 10) +5); // 提款隨機金額
             }
         }
     }
