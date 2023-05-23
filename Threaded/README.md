@@ -43,3 +43,4 @@ Account 類別包含了存款和取款的方法。在執行這些方法時，它
 
 ### PCP
 PCP (Producer & Comsumer Problem)
+生產者與消費者問題（Producer and Consumer Problem）是一個經典的多執行緒同步問題，描述了一個生產者和消費者共享一個有限緩衝區（Buffer）的情境。
