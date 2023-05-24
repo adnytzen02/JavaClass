@@ -17,7 +17,7 @@ public class Main {
         private static Condition notEmpty = lock.newCondition();
         private static Condition notFull = lock.newCondition();
 
-        public void write(int value) {
+        public void input(int value) {
             lock.lock(); // 取得鎖
             try {
                 while (queue.size() == CAPACITY) {
@@ -32,7 +32,7 @@ public class Main {
             }
         }
 
-        public int read() {
+        public int output() {
             int value = 0;
             lock.lock(); // 取得鎖
             try {
@@ -56,7 +56,7 @@ public class Main {
         public void run() {
             try {
                 while (true) {
-                    System.out.println("Consumer reads " + buffer.read()); // 消費者從緩衝區中取出產品
+                    System.out.println("Consumer reads " + buffer.output()); // 消費者從緩衝區中取出產品
                     Thread.sleep((int) (Math.random() * 1000));
                 }
             } catch (InterruptedException e) {
@@ -73,7 +73,7 @@ public class Main {
                 int i = 0;
                 while (true) {
                     System.out.println("Producer writes " + i); // 生產者放入產品到緩衝區
-                    buffer.write(i++);
+                    buffer.input(i++);
                     Thread.sleep((int) (Math.random() * 1000));
                 }
             } catch (InterruptedException e) {
