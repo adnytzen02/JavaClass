@@ -6,3 +6,8 @@ Java提供了用於網絡通信的Socket類和ServerSocket類，它們位於java
 
 ### MultiThread
 改進了 1. firstServerClient_Server.java，使其能夠同時處理多個客戶端的請求。每當有新的客戶端連接，就會為該客戶端創建一個新的執行緒，該執行緒獨立運行，處理該客戶端的請求。這樣可以提高伺服器的效能和並發性能，使多個客戶端能夠同時連接和進行通信。   
+
+### Sending Obj
+ Circle.java 一個簡單的客戶端，用於將 Circle 物件發送給伺服器並接收伺服器的回應。   
+ CircleServer.java 簡單的伺服器端，用於接收客戶端傳送的 Circle 物件，並回傳計算結果給客戶端。    
+ 實現 Serializable 介面，該類別可以被序列化，這使得它可以在網絡上進行傳輸或在檔案系統中保存。    
