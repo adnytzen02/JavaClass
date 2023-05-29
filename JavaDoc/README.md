@@ -33,4 +33,4 @@ JavaDoc不僅僅是一種文檔生成工具，還是一個代碼設計工具。�
 
 
 ### DocAPI
-利用 IntelliJ IDE 製作 Java DOC
+利用 IntelliJ IDEA 製作 Java DOC
