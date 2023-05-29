@@ -58,3 +58,6 @@ Semaphore 可以用於解決多種並發問題，例如限制資源的同時訪�
 ### Fork and Join Principle
 使用 Java 實現的並行合併排序。並行合併排序是一種多線程編程技術，用於將一個大的陣列拆分為多個子陣列，並在多個線程中對這些子陣列進行排序，最後再將排序後的子陣列合併為一個有序的大陣列。    
 ForkJoin 框架是 Java 7 引入的一個新特性，用於實現並行運算。在 ForkJoin 框架中，可以使用 RecursiveTask 或 RecursiveAction 來設計子任務，然後使用 ForkJoinPool 來執行這些子任務。    
+
+
+### Sending Files
