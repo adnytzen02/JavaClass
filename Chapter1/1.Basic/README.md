@@ -43,5 +43,21 @@ int[] numbers = {1, 2, 3, 4, 5};
 ```
 Java還提供了自動拆箱（Autoboxing）和自動裝箱（Autounboxing）的功能，使得原始數據類型和對應的包裝類型之間可以進行自動轉換，方便開發者操作數據。    
 
-### String 
-
+### String Operation
+字串操作（String Operations）是指在Java中對字串（String）進行各種操作的過程。Java提供了豐富的內建方法和運算符，可以對字串進行拼接、查找、替換、分割等操作。
+1. 字串拼接（String Concatenation）：使用+運算符可以將兩個字串連接起來。   
+```js
+String str1 = "Hello";
+String str2 = "World";
+String result = str1 + " " + str2;  // "Hello World"
+```
+2. 字串長度（String Length）：使用length()方法可以獲取字串的長度。   
+```js
+String str = "Hello";
+int index = str.length();  // 5
+```
+3. 字串查找（String Searching）：使用indexOf()方法可以查找字串中特定字符或子字串的位置。   
+```js
+String str = "Hello World";
+int index = str.indexOf("World");  // 6
+```
