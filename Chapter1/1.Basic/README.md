@@ -25,6 +25,7 @@ int age = 25;
 但變數名稱也不能為 Java 的關鍵字。   
 
 
+
 ###  數據類型 (DataType)
 原始數據類型用於存儲基本的數值類型，而引用數據類型用於存儲對象的引用。引用數據類型需要使用關鍵字new來創建對象，並且可以訪問對象的屬性和方法。
 
@@ -42,6 +43,8 @@ String name = "John Smith";
 int[] numbers = {1, 2, 3, 4, 5};
 ```
 Java還提供了自動拆箱（Autoboxing）和自動裝箱（Autounboxing）的功能，使得原始數據類型和對應的包裝類型之間可以進行自動轉換，方便開發者操作數據。    
+
+
 
 ### 字串操作 (String Operation)
 字串操作（String Operations）是指在Java中對字串（String）進行各種操作的過程。Java提供了豐富的內建方法和運算符，可以對字串進行拼接、查找、替換、分割等操作。
@@ -61,6 +64,9 @@ int index = str.length();  // 5
 String str = "Hello World";
 int index = str.indexOf("World");  // 6
 ```
+
+
+
 ### 關係運算符（Relational Operators） & 條件運算符（Conditional Operators）
 在Java中，關係運算符（Relational Operators）和條件運算符（Conditional Operators）用於比較和判斷數值或表達式的結果。這些運算符常用於條件語句和迴圈中，以根據特定條件執行不同的操作。
 
@@ -100,6 +106,8 @@ boolean condition3 = !(x > 0);  // false
 
 在使用條件運算符時，需要注意運算符的優先級和括號的使用，以確保表達式的求值符合預期。
 
+
+
 #### = 、 == 差別
 = 和 == 是兩個不同的運算符，它們具有不同的功能和用途。
 
@@ -123,3 +131,30 @@ if (x == y) {
 }
 ```
 要注意的是，== 運算符在比較引用數據類型（如對象）時，比較的是兩個對象的引用是否相等，而不是內容是否相等。如果需要比較對象的內容是否相等，則需要使用對應的方法（如 equals() 方法）進行比較。    
+
+
+
+### 算術運算符（Arithmetic Operators）
+在Java中，算術運算符（Arithmetic Operators）用於執行數學運算，包括加法、減法、乘法、除法和取餘等操作。下面是Java中常見的算術運算符：   
+1. 加法（Addition）：用+表示，將兩個數值相加。
+2. 減法（Subtraction）：用-表示，將右邊的數值減去左邊的數值。
+3. 乘法（Multiplication）：用*表示，將兩個數值相乘。
+4. 除法（Division）：用/表示，將左邊的數值除以右邊的數值。如果兩個操作數都是整數，則結果將被截斷為整數（去掉小數部分）。   
+5. 取餘（Modulus）：用%表示，計算左邊的數值除以右邊的數值的餘數。
+6. 自增（Increment）：用++表示，將變量的值增加1。
+7. 自減（Decrement）：用--表示，將變量的值減少1。
+```js
+        int sum = 5 + 3;  // 8
+        int difference = 7 - 2;  // 5
+        int product = 4 * 3;  // 12
+        int quotient = 10 / 3;  // 3
+        int remainder = 10 % 3;  // 1
+        int x = 5;
+        x++;  // x的值變為6
+        int y = 8;
+        y--;  // y的值變為7
+```
+8. 使用括號來控制運算的優先級。
+```js
+int result = (4 + 2) * 3;  // 18
+```
