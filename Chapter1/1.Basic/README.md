@@ -25,7 +25,7 @@ int age = 25;
 但變數名稱也不能為 Java 的關鍵字。   
 
 
-###  DataType
+###  數據類型 (DataType)
 原始數據類型用於存儲基本的數值類型，而引用數據類型用於存儲對象的引用。引用數據類型需要使用關鍵字new來創建對象，並且可以訪問對象的屬性和方法。
 
 以下是一些例子：
@@ -43,7 +43,7 @@ int[] numbers = {1, 2, 3, 4, 5};
 ```
 Java還提供了自動拆箱（Autoboxing）和自動裝箱（Autounboxing）的功能，使得原始數據類型和對應的包裝類型之間可以進行自動轉換，方便開發者操作數據。    
 
-### String Operation
+### 字串操作 (String Operation)
 字串操作（String Operations）是指在Java中對字串（String）進行各種操作的過程。Java提供了豐富的內建方法和運算符，可以對字串進行拼接、查找、替換、分割等操作。
 1. 字串拼接（String Concatenation）：使用+運算符可以將兩個字串連接起來。   
 ```js
@@ -61,3 +61,65 @@ int index = str.length();  // 5
 String str = "Hello World";
 int index = str.indexOf("World");  // 6
 ```
+### 關係運算符（Relational Operators） & 條件運算符（Conditional Operators）
+在Java中，關係運算符（Relational Operators）和條件運算符（Conditional Operators）用於比較和判斷數值或表達式的結果。這些運算符常用於條件語句和迴圈中，以根據特定條件執行不同的操作。
+
+以下是Java中常見的關係運算符：
+
+- `==`：等於，用於比較兩個值是否相等。
+- `!=`：不等於，用於比較兩個值是否不相等。
+- `>`：大於，用於判斷左邊的值是否大於右邊的值。
+- `<`：小於，用於判斷左邊的值是否小於右邊的值。
+- `>=`：大於等於，用於判斷左邊的值是否大於等於右邊的值。
+- `<=`：小於等於，用於判斷左邊的值是否小於等於右邊的值。
+
+關係運算符返回的結果是一個布爾值，即`true`或`false`。
+
+以下是Java中常見的條件運算符：
+
+- `&&`：邏輯與（AND），用於判斷多個條件是否同時成立。
+- `||`：邏輯或（OR），用於判斷多個條件是否至少有一個成立。
+- `!`：邏輯非（NOT），用於對一個條件的結果進行取反。
+
+條件運算符在條件語句（如`if`語句、`while`迴圈等）中常用於組合多個條件，以便根據特定的條件執行不同的程式碼塊。
+
+以下是一些例子：
+
+```java
+int x = 5;
+int y = 10;
+
+boolean isEqual = (x == y);  // false
+boolean isGreater = (x > y);  // false
+boolean isLessThanOrEqual = (x <= y);  // true
+
+boolean condition1 = (x > 0) && (y < 20);  // true
+boolean condition2 = (x > 0) || (y > 20);  // true
+boolean condition3 = !(x > 0);  // false
+```
+
+在使用條件運算符時，需要注意運算符的優先級和括號的使用，以確保表達式的求值符合預期。
+
+#### = 、 == 差別
+= 和 == 是兩個不同的運算符，它們具有不同的功能和用途。
+
+1. =（賦值運算符）：
+    用於將右邊的值賦給左邊的變量。    
+    例如：int x = 5; 表示將數值 5 賦值給變量 x。    
+
+2. ==（相等運算符）：
+    用於比較兩個值是否相等。   
+    返回布爾值，即 true 或 false。   
+    例如：int x = 5; int y = 5; boolean result = (x == y); 結果是 true，因為 x 和 y 的值相等。   
+在判斷相等性時，我們應該使用 == 運算符，而不是 = 運算符。以下是一個示例：   
+```js
+int x = 5;
+int y = 10;
+
+if (x == y) {
+    System.out.println("x and y are equal");
+} else {
+    System.out.println("x and y are not equal");
+}
+```
+要注意的是，== 運算符在比較引用數據類型（如對象）時，比較的是兩個對象的引用是否相等，而不是內容是否相等。如果需要比較對象的內容是否相等，則需要使用對應的方法（如 equals() 方法）進行比較。    
