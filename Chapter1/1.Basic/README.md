@@ -25,4 +25,23 @@ int age = 25;
 但變數名稱也不能為 Java 的關鍵字。   
 
 
-### 
+###  DataType
+原始數據類型用於存儲基本的數值類型，而引用數據類型用於存儲對象的引用。引用數據類型需要使用關鍵字new來創建對象，並且可以訪問對象的屬性和方法。
+
+以下是一些例子：
+```js
+// 原始數據類型
+byte age = 25;
+int count = 100;
+double pi = 3.14159;
+char grade = 'A';
+boolean isStudent = true;
+
+// 引用數據類型
+String name = "John Smith";
+int[] numbers = {1, 2, 3, 4, 5};
+```
+Java還提供了自動拆箱（Autoboxing）和自動裝箱（Autounboxing）的功能，使得原始數據類型和對應的包裝類型之間可以進行自動轉換，方便開發者操作數據。    
+
+### String 
+
