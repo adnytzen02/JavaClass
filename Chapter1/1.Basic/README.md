@@ -1,12 +1,16 @@
 ## Basic Grammar  JAVA的基本語法
 
+### 1. Hello World !
+ "Hello，World！" 程序。這是一個對Java這門程式語言的起點。
+
+
 
 ### Class 規則
 1. Class 名稱一定要跟文件名稱相同
 2. Class 名稱一定要大寫英文當作開頭
 3. public static void main(String[] args) {}，在Java程式中，main方法是程式的進入點，它是程式執行時的起始位置。程式從main方法開始執行，並且可以在該方法中撰寫程式碼來執行各種操作。   
 
-### Variable and Assignment
+### 2. Variable and Assignment
 變數是用來存儲數據的容器。可以將變數想象成一個具有名稱的儲存位置，用於保存數據值。在Java中，定義變數時需要指定其類型，並且可以為其賦予初始值。    
 變數的定義格式如下：    
 ```js
@@ -26,7 +30,7 @@ int age = 25;
 
 
 
-###  數據類型 (DataType)
+###  3. 數據類型 (DataType)
 原始數據類型用於存儲基本的數值類型，而引用數據類型用於存儲對象的引用。引用數據類型需要使用關鍵字new來創建對象，並且可以訪問對象的屬性和方法。
 
 以下是一些例子：
