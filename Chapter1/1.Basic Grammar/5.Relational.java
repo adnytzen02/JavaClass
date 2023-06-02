@@ -1,4 +1,4 @@
-public class Main {
+public class Relational {
     public static void main(String[] args) {
         // 基礎認識
         System.out.println(5 == 3);

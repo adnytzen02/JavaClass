@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class Main {
+public class Vaccine {
     public static void main(String[] args) {
         // 彈出對話框，要求使用者輸入疫苗名稱，並將輸入的字串儲存到變數vaccine中
         String vaccine = JOptionPane.showInputDialog("請輸入疫苗名稱(選項包括AZ/BNT/Moderna/Janssen): ");

@@ -1,7 +1,7 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Main {
+public class BMIcalculation {
 
     private static final DecimalFormat DF = new DecimalFormat("0.00"); // 建立一個格式化數字的物件，用來將BMI數值格式化為兩位小數點
     private static final String exit = "exit"; // 設定一個字串常數，用來判斷使用者是否要退出程式
