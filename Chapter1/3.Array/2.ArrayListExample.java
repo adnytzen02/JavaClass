@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Main {
+public class ArrayListExample {
     public static void main(String[] args) {
         // 創建一個ArrayList並添加元素
         ArrayList<String> people = new ArrayList<>();
