@@ -50,7 +50,7 @@ Java還提供了自動拆箱（Autoboxing）和自動裝箱（Autounboxing）的
 
 
 
-### 字串操作 (String Operation)
+### 4. 字串操作 (String Operation)
 字串操作（String Operations）是指在Java中對字串（String）進行各種操作的過程。Java提供了豐富的內建方法和運算符，可以對字串進行拼接、查找、替換、分割等操作。
 1. 字串拼接（String Concatenation）：使用+運算符可以將兩個字串連接起來。   
 ```js
@@ -71,7 +71,7 @@ int index = str.indexOf("World");  // 6
 
 
 
-### 關係運算符（Relational Operators） & 條件運算符（Conditional Operators）
+### 5. 關係運算符（Relational Operators） & 條件運算符（Conditional Operators）
 在Java中，關係運算符（Relational Operators）和條件運算符（Conditional Operators）用於比較和判斷數值或表達式的結果。這些運算符常用於條件語句和迴圈中，以根據特定條件執行不同的操作。
 
 以下是Java中常見的關係運算符：
@@ -112,7 +112,7 @@ boolean condition3 = !(x > 0);  // false
 
 
 
-#### = 、 == 差別
+### = 、 == 差別
 = 和 == 是兩個不同的運算符，它們具有不同的功能和用途。
 
 1. =（賦值運算符）：
@@ -138,7 +138,7 @@ if (x == y) {
 
 
 
-### 算術運算符（Arithmetic Operators）
+### 6. 算術運算符（Arithmetic Operators）
 在Java中，算術運算符（Arithmetic Operators）用於執行數學運算，包括加法、減法、乘法、除法和取餘等操作。下面是Java中常見的算術運算符：   
 1. 加法（Addition）：用+表示，將兩個數值相加。
 2. 減法（Subtraction）：用-表示，將右邊的數值減去左邊的數值。
@@ -163,7 +163,7 @@ if (x == y) {
 int result = (4 + 2) * 3;  // 18
 ```
 
-### For Loop (for迴圈)
+### 7. For Loop (for迴圈)
 在Java中，for迴圈是一種常用的迴圈結構，用於重複執行程式碼塊一定的次數或基於特定的條件。for迴圈提供了一種簡潔的方式來控制迴圈的初始化、條件和迭代。         
 
 for迴圈的一般語法如下：      
@@ -178,7 +178,7 @@ for (initialization; condition; iteration) {
 2. condition：每次迴圈迭代之前進行的條件檢查，如果條件為真，則執行迴圈內的程式碼塊；如果條件為假，則結束迴圈。      
 3. iteration：在每次迴圈迭代之後執行的操作，如遞增或遞減計數器的值。     
 
-### While Loop (while迴圈)
+### 8. While Loop (while迴圈)
 在Java中，while迴圈是一種迴圈結構，用於根據特定的條件重複執行程式碼塊，直到條件變為假。while迴圈只檢查條件的真假，並在條件為真的情況下重複執行程式碼。    
 
 while迴圈的一般語法如下：    
@@ -193,7 +193,7 @@ while (condition) {
 * condition 是一個布爾表達式，表示要檢查的條件。只要條件為真，就會重複執行迴圈內的程式碼塊。如果條件為假，則結束迴圈並繼續執行迴圈後的程式碼。    
 
 
-### Nested Loop (巢狀迴圈)
+### 9. Nested Loop (巢狀迴圈)
 在Java中，巢狀迴圈是指在一個迴圈的程式碼塊中包含另一個迴圈。這允許在內部迴圈的每次迭代中都完整地執行外部迴圈。    
 
 巢狀迴圈的常見用途是在二維陣列或矩陣中遍歷元素。外部迴圈控制行數，內部迴圈控制列數。    
@@ -222,5 +222,33 @@ for (int i = 0; i < matrix.length; i++) {       // 外部迴圈遍歷行
 7 8 9 
 ```
 
-### Break , Continue
+### 10. Break , Continue
+
+在Java中，break和continue是用於控制迴圈行為的關鍵字。   
+
+* break用於終止整個迴圈的執行，即使迴圈的條件仍然為真。當程式碼達到break語句時，迴圈立即結束，並執行迴圈後的下一個語句。這在需要在某個條件滿足時提前結束迴圈時很有用。    
+以下是一個使用break的例子，打印1到10的數字，但當數字為5時結束迴圈：   
+```js
+for (int i = 1; i <= 10; i++) {
+    System.out.println(i);
+    
+    if (i == 5) {
+        break;
+    }
+}
+``` 
+
+* continue則用於跳過迴圈的當前迭代，並進行下一次迭代。當程式碼達到continue語句時，迴圈立即跳到下一次迭代的開始位置。這在需要跳過某些特定條件的迭代時很有用。    
+以下是一個使用continue的例子，打印1到10的奇數：    
+```js
+for (int i = 1; i <= 10; i++) {
+    if (i % 2 == 0) {
+        continue;
+    }
+    
+    System.out.println(i);
+}
+```
+
+* break和continue語句通常與條件語句（如if語句）結合使用，根據特定的條件來控制迴圈的行為。這些關鍵字可以提供更靈活的控制，以滿足不同的迴圈需求。    
 
