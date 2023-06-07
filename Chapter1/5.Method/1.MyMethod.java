@@ -12,7 +12,7 @@ public class MyMethod {
 
     public static void main(String[] args) {
         // 建立 Main 物件
-        Main m = new Main();
+        MyMethod m = new MyMethod();
         
         // 呼叫 sayHello 方法，印出 "Hello"
         m.sayHello();
