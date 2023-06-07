@@ -1,12 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Main extends JPanel {
+public class LoopLab extends JPanel {
 
     String type;
     int n;
 
-    public Main() {
+    public LoopLab() {
         // 詢問使用者選擇要顯示的表格類型和大小
         this.type = JOptionPane.showInputDialog("Please select table (addition table or multiplication) A / M");
         this.n = Integer.parseInt(JOptionPane.showInputDialog("How big do you want to be?"));
