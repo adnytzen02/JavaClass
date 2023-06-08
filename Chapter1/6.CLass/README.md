@@ -33,8 +33,20 @@
 構造方法在Java中扮演著非常重要的角色，它確保了對象在創建時被正確地初始化。通常，我們在類別中定義一個或多個構造方法，根據需求選擇合適的構造方法來創建對象。      
 
 ### 1. MyClass
-在這個程式中，我們創建了一個 Circle 類別，它代表了一個圓形物件。該類別有一個 radius 成員變數，用於存儲圓的半徑。在 Circle 類別中，我們定義了一個建構函式 public Circle(double newRadius)，它接受一個 double 型別的參數 newRadius，並將該參數設定為 radius 成員變數的值。     
+在這個程式中，創建了一個 Circle 類別，它代表了一個圓形物件。該類別有一個 radius 成員變數，用於存儲圓的半徑。在 Circle 類別中，定義了一個建構函式 public Circle(double newRadius)，它接受一個 double 型別的參數 newRadius，並將該參數設定為 radius 成員變數的值。     
         
-在 Main 類別的 main 方法中，我們創建了一個 Circle 對象 circle1，並將半徑設定為 10。然後，我們通過 circle1.radius 訪問 circle1 對象的 radius 成員變數，並將其輸出到控制台。      
+在 Main 類別的 main 方法中，創建了一個 Circle 對象 circle1，並將半徑設定為 10。然後，通過 circle1.radius 訪問 circle1 對象的 radius 成員變數，並將其輸出到控制台。      
 
 ### 2. ClassMethod
+
+在這個程式中，擴充了 `Circle` 類別，新增了 `getArea` 方法用於計算圓的面積。定義了兩個建構函式，一個是無參數建構函式 `public Circle()`，它將半徑設定為預設值 `1.0`；另一個是帶參數建構函式 `public Circle(double newRadius)`，它接受一個 `double` 型別的參數 `newRadius`，並將該參數設定為半徑的值。      
+      
+在 `Main` 類別的 `main` 方法中，創建了兩個 `Circle` 對象，`circle1` 和 `circle2`。對於 `circle1`，使用帶參數建構函式並將半徑設定為 `10`，然後通過 `circle1.getArea()` 調用 `getArea` 方法，計算並輸出圓的面積。對於 `circle2`，使用無參數建構函式，它將半徑設定為預設值 `1.0`，同樣使用 `circle2.getArea()` 計算並輸出圓的面積。      
+      
+執行該程式，它將輸出以下內容：      
+```js
+314.1592653589793
+3.141592653589793
+```
+      
+這表示 `circle1` 的面積是 `314.1592653589793`，`circle2` 的面積是 `3.141592653589793`。      
