@@ -32,4 +32,9 @@
       
 構造方法在Java中扮演著非常重要的角色，它確保了對象在創建時被正確地初始化。通常，我們在類別中定義一個或多個構造方法，根據需求選擇合適的構造方法來創建對象。      
 
-### 
+### 1. MyClass
+在這個程式中，我們創建了一個 Circle 類別，它代表了一個圓形物件。該類別有一個 radius 成員變數，用於存儲圓的半徑。在 Circle 類別中，我們定義了一個建構函式 public Circle(double newRadius)，它接受一個 double 型別的參數 newRadius，並將該參數設定為 radius 成員變數的值。     
+        
+在 Main 類別的 main 方法中，我們創建了一個 Circle 對象 circle1，並將半徑設定為 10。然後，我們通過 circle1.radius 訪問 circle1 對象的 radius 成員變數，並將其輸出到控制台。      
+
+### 2. ClassMethod
