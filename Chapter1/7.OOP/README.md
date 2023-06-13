@@ -60,3 +60,49 @@ public class Person {
 * 外部程式只需要知道如何使用 Person 類別，而不需要知道 Person 類別的內部實現細節。在設置 age 的方法中，還添加了檢查 age 是否小於 0 的邏輯，從而保護 age 的合法性。
 
    
+### 繼承 (Inheritance)
+在Java中，繼承（Inheritance）是一種對象導向編程的概念，它允許一個類（稱為子類或派生類）繼承另一個類（稱為父類或基類）的屬性和方法。繼承建立了一個"是一個"（is-a）的關係，即子類是父類的特殊類型。      
+      
+繼承的主要優點是代碼重用和階層結構的建立。通過繼承，子類可以繼承父類的屬性和方法，並且還可以添加自己的特定屬性和方法。這樣可以節省代碼，並且使代碼更具結構性和可擴展性。      
+      
+在Java中，使用關鍵字`extends`來實現繼承。子類可以繼承父類的非私有成員（字段和方法），包括公共（`public`）、受保護（`protected`）和默認（沒有顯式修飾符）訪問修飾符修飾的成員。      
+      
+下面是一個簡單的示例，展示了Java中的繼承：      
+      
+```java
+public class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void eat() {
+        System.out.println(name + " is eating.");
+    }
+}
+
+public class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+
+    public void bark() {
+        System.out.println(name + " is barking.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog("Bobby");
+        dog.eat(); // 繼承自Animal類
+        dog.bark(); // Dog類的特有方法
+    }
+}
+```
+      
+在上述示例中，`Animal`類是父類，`Dog`類是子類。`Dog`類繼承了`Animal`類，繼承了父類的`name`字段和`eat()`方法。同時，`Dog`類還添加了自己的`bark()`方法。      
+      
+在`Main`類中，我們創建了一個`Dog`對象並調用其繼承的方法和自身的方法。      
+      
+通過繼承，`Dog`類可以重用`Animal`類的代碼，並擴展了自己的功能。這使得代碼更具結構性，同時還保持了代碼的可讀性和維護性。      
