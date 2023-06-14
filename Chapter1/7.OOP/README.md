@@ -131,4 +131,55 @@ public class Main {
 3. 子類中的方法不能抛出比父類中被覆寫方法更多的異常，可以抛出相同的異常或者不抛出異常。
          
 
-### 
+### Polymorphism
+在Java中，多態性（Polymorphism）是一種面向對象編程的概念，它允許使用基類（父類）的引用變量來引用子類的對象，並根據實際的對象類型來調用相應的方法。這樣可以在不同的對象上呈現相同的行為，實現代碼的重用和靈活性。
+
+Java中的多態性主要基於兩個機制：繼承和方法覆寫。
+
+繼承：通過繼承，子類可以繼承父類的屬性和方法。當我們使用父類的引用變量來引用子類的對象時，可以通過這個引用變量訪問和調用父類中的成員，也可以根據實際的對象類型調用子類中覆寫的方法。
+
+方法覆寫：子類可以重寫（覆寫）父類中已有的方法，以定義自己的實現方式。當使用父類引用變量引用子類對象並調用該方法時，根據實際的對象類型，將調用子類中覆寫的方法。
+
+下面是一個示例，展示了多態性的使用：
+
+```java
+public class Animal {
+    public void makeSound() {
+        System.out.println("Animal is making a sound.");
+    }
+}
+
+public class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Cat is meowing.");
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog is barking.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Animal();
+        Animal animal2 = new Cat();
+        Animal animal3 = new Dog();
+
+        animal1.makeSound(); // 輸出: Animal is making a sound.
+        animal2.makeSound(); // 輸出: Cat is meowing.
+        animal3.makeSound(); // 輸出: Dog is barking.
+    }
+}
+```
+
+在上述示例中，`Animal`類是父類，`Cat`類和`Dog`類都是子類。我們創建了父類引用變量`animal1`，並用它分別引用了`Animal`、`Cat`和`Dog`類的對象。通過這些引用變量，我們可以調用`makeSound()`方法。
+
+根據對象的實際類型，將調用相應的方法。當`animal1`引用`Animal`對象時，調用的是
+
+`Animal`類的`makeSound()`方法；當`animal2`引用`Cat`對象時，調用的是`Cat`類的`makeSound()`方法；當`animal3`引用`Dog`對象時，調用的是`Dog`類的`makeSound()`方法。
+
+這就是多態性的體現，同一個方法根據實際的對象類型而具有不同的行為。這種特性使得代碼更具靈活性、可擴展性和可重用性。
