@@ -10,6 +10,10 @@ public class Student extends Person {
         System.out.println("Learning.....");  // 學習的動作
     }
     
+    @Override
+    public void walk() {
+        System.out.println(this.name + " Walking.....");  // 覆寫父類別的走路方法，加上學生的姓名
+    }
 }
 
 
