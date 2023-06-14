@@ -9,6 +9,12 @@ public class Person {
         this.address = address;
     }
 
+    public Person() {
+        this.name = "A People";  // 預設姓名為 "A People"
+        this.age = 0;  // 預設年齡為 0 歲
+        this.address = "Taiwan";  // 預設地址為 "Taiwan"
+    }
+
     public void walk() {
         System.out.println("Walking....");  // 走路的動作
     }
